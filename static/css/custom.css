@@ -1,0 +1,181 @@
+/* Custom styles for the AI Resume Generator */
+
+/* Resume Preview Styling */
+.resume-preview {
+    background: white;
+    color: black;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Times New Roman', serif;
+    line-height: 1.4;
+}
+
+.resume-header h2 {
+    color: #2c3e50;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.section-title {
+    color: #34495e;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1rem;
+}
+
+.job-entry {
+    margin-bottom: 1rem;
+}
+
+.education-entry {
+    margin-bottom: 0.75rem;
+}
+
+/* Form Enhancements */
+.input-group .btn {
+    border-radius: 0 0.375rem 0.375rem 0;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background: var(--bs-dark);
+    border-bottom: 1px solid var(--bs-gray-600);
+}
+
+/* Template Selection */
+.btn-check:checked + .btn-outline-secondary {
+    background-color: var(--bs-info);
+    border-color: var(--bs-info);
+    color: white;
+}
+
+/* Loading Spinner */
+#loadingSpinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1050;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+/* Suggestions Panel */
+#suggestionsPanel .alert {
+    border-left: 4px solid var(--bs-info);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .resume-preview {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+/* Print Styles for PDF Preview */
+@media print {
+    .resume-preview {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+    }
+    
+    .section-title {
+        page-break-after: avoid;
+    }
+    
+    .job-entry,
+    .education-entry {
+        page-break-inside: avoid;
+    }
+}
+
+/* Animation for enhanced content */
+@keyframes highlight {
+    0% { background-color: var(--bs-success); }
+    100% { background-color: transparent; }
+}
+
+.enhanced {
+    animation: highlight 1s ease-in-out;
+}
+
+/* Form validation styles */
+.form-control:invalid {
+    border-color: var(--bs-danger);
+}
+
+.form-control:valid {
+    border-color: var(--bs-success);
+}
+
+/* Custom button styles */
+.btn-outline-info:hover {
+    background-color: var(--bs-info);
+    border-color: var(--bs-info);
+    color: white;
+}
+
+/* Navbar styling */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Footer styling */
+footer {
+    margin-top: auto;
+}
+
+/* Utility classes */
+.text-justify {
+    text-align: justify;
+}
+
+.border-left-info {
+    border-left: 4px solid var(--bs-info) !important;
+}
+
+/* Experience and Education card styling */
+.experience-entry,
+.education-entry {
+    transition: all 0.3s ease;
+}
+
+.experience-entry:hover,
+.education-entry:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Template preview styling */
+.template-preview {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.template-preview:hover {
+    transform: scale(1.05);
+}
+
+/* Success states */
+.success-state {
+    color: var(--bs-success);
+}
+
+.error-state {
+    color: var(--bs-danger);
+}
